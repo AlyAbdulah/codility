@@ -1,11 +1,12 @@
 def solution(N):
     maxlen = 0
-    # Converting number to binary and removing starting binary code i.e 0b.
-    binary = bin(N).replace("0b", "")
-    # converting number to string then to list
-    numbers = list(str(binary))
-    foundOne = False
     counter = 0
+    foundOne = False
+    
+    binary = bin(N).replace("0b", "")
+    
+    numbers = list(str(binary))
+    
     for num in numbers:
         if num == str(1):
             if foundOne == True:
